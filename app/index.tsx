@@ -1,3 +1,4 @@
+import ProductItem from "@/components/ProductItem";
 import { products } from "@/data/products";
 import { Image, StyleSheet, Text, View } from "react-native";
 export default function Index() {
@@ -14,42 +15,7 @@ export default function Index() {
         />
       </View>
       <View style={styles.galleryGrid}>
-        <View style={styles.productWrapper}>
-          <Image
-            style={styles.productImageSmall}
-            source={{
-              uri: products[0].image,
-            }}
-          />
-          <View>
-            <Text style={styles.productTitle}>{products[0].name}</Text>
-            <Text style={styles.productPrice}>{products[0].price}</Text>
-          </View>
-        </View>
-        <View style={styles.productWrapper}>
-          <Image
-            style={styles.productImageSmall}
-            source={{
-              uri: products[1].image,
-            }}
-          />
-          <View>
-            <Text style={styles.productTitle}>{products[1].name}</Text>
-            <Text style={styles.productPrice}>{products[1].price}</Text>
-          </View>
-        </View>
-        <View style={styles.productWrapper}>
-          <Image
-            style={styles.productImageSmall}
-            source={{
-              uri: products[2].image,
-            }}
-          />
-          <View>
-            <Text style={styles.productTitle}>{products[2].name}</Text>
-            <Text style={styles.productPrice}>{products[2].price}</Text>
-          </View>
-        </View>
+        <ProductItem product={products[0]} />
       </View>
     </>
   );
