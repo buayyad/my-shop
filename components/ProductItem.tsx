@@ -1,7 +1,14 @@
 import React from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
+interface ProductItemProps {
+  product: {
+    name: string;
+    price: string;
+    image: string;
+  };
+}
 
-const ProductItem = (props) => {
+const ProductItem = (props: ProductItemProps) => {
   return (
     <View style={styles.productWrapper}>
       <Image

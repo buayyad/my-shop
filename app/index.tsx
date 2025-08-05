@@ -15,7 +15,10 @@ export default function Index() {
         />
       </View>
       <View style={styles.galleryGrid}>
-        <ProductItem product={products[0]} />
+        <ProductItem product={products[0]} key={products[0].name} />
+        <ProductItem product={products[1]} key={products[1].name} />
+        <ProductItem product={products[2]} key={products[2].name} />
+        <ProductItem product={products[3]} key={products[3].name} />
       </View>
     </>
   );
